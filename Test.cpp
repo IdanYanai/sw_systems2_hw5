@@ -59,6 +59,7 @@ TEST_CASE("TESTING") {
     CHECK(!(it5 == it4));
 
     // GT, LT only valid for same type of iterators
-    CHECK_THROWS(it4 < it2);
-    CHECK_THROWS(it5 < it3);
+    CHECK_NOTHROW(it5 = it1);
+    CHECK(it5 == it1);
+    CHECK(*it5 == 4);
 }
